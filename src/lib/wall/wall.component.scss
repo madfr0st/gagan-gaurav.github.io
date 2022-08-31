@@ -1,0 +1,14 @@
+.back{
+	overflow: hidden;
+	height: 100vh;
+	width: 100vw;
+	align-items: center;
+	justify-content: center;
+
+	.wall {
+		overflow: hidden;
+		height: 100%;
+		width: 100%;
+	}
+}
+
