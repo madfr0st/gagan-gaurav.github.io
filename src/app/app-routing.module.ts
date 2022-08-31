@@ -4,8 +4,8 @@ import { WallComponent } from 'src/lib/wall/wall.component';
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/app-root', pathMatch : 'full'},
-  { path: "app-root", component: AppComponent}
+  { path: '', redirectTo: '/app-wall', pathMatch : 'full'},
+  { path: "app-wall", component: WallComponent}
 ];
 
 @NgModule({
