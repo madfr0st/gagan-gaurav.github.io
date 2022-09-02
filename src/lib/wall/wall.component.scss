@@ -4,11 +4,16 @@
 	width: 100vw;
 	align-items: center;
 	justify-content: center;
+	background-image: url("/assets/wall/images/wall1.jpg");
+	display: flex;
 
-	.wall {
-		overflow: hidden;
-		height: 100%;
-		width: 100%;
+	.btn{
+		background-color: red;
+		position: absolute;
+		// top: 5%;
+		// left: 95%;
+		cursor: pointer;
 	}
+
 }
 

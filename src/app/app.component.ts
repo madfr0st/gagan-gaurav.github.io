@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { WallComponent } from 'src/lib/wall/wall.component';
 
 @Component({
   selector: 'app-root',
