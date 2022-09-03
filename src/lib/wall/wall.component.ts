@@ -1,6 +1,5 @@
 import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit, HostListener} from '@angular/core';
-import {Router } from '@angular/router';
 import { AppConfig } from 'src/config/app.config';
 
 @Component({
@@ -28,7 +27,7 @@ export class WallComponent implements OnInit {
   public insideMenubar: boolean = false;
 
   
-  constructor(public router: Router) { 
+  constructor() { 
     this.initialWidth = window.innerWidth;
     this.x1 = window.innerWidth - 100;
     this.y1 = 50;
@@ -50,6 +49,7 @@ export class WallComponent implements OnInit {
   // listen to the mouseclick is pressed.
   @HostListener('document:mousedown', ['$event'])
   onMouseDown(event: MouseEvent) {
+    event.preventDefault();
     // console.log(event.clientX);
     // this.mouseHold = true;
     if(this.insideHome){
@@ -69,17 +69,17 @@ export class WallComponent implements OnInit {
   @HostListener('document:mouseup', ['$event'])
   onMouseUp(event: MouseEvent) {
     console.log(event);
+    event.preventDefault();
     // this.mouseHold = true;
     this.mouseHold1 = false;
     this.mouseHold2 = false;
-    this.insideHome = false;
-    this.insideMenubar = false;
   }
 
   // when mouse is moving.
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
-    console.log(this.mouseHold2);
+    event.preventDefault();
+    console.log(this.mouseHold2, this.insideMenubar);
     if(this.mouseHold1 && this.insideHome){
       this.x1 += event.clientX - this.x2;
       this.x2 = event.clientX;
@@ -104,17 +104,17 @@ export class WallComponent implements OnInit {
     this.insideHome = true;
   }
 
-  // mouseOut(){
-  //   if(this.mouseHold == false) this.insideHome = false;
-  // }
+  mouseOut(){
+    if(this.mouseHold1 == false) this.insideHome = false;
+  }
 
   mouseOverMenubar(){
     this.insideMenubar = true;
   }
 
-  // mouseOutMenubar(){
-  //   if(this.mouseHold == false) this.insideMenubar = false;
-  // }
+  mouseOutMenubar(){
+    if(this.mouseHold2 == false) this.insideMenubar = false;
+  }
 
 
   flipCard() {
