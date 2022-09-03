@@ -1,6 +1,7 @@
 
 <div class = "back">
-	<button class = "btn" (click)="flipCard()" (mouseover)="mouseOver()"  (mouseout)="mouseOut()" style = "top: {{y1}}px; left: {{x1}}px" > About </button> 
+	<!-- <button class = "btn" (click)="flipCard()" (mouseover)="mouseOver()"  (mouseout)="mouseOut()" style = "top: {{y1}}px; left: {{x1}}px" > About </button>  -->
+	<img src="/assets/images/home_button/home.png" class ="image" (click)="flipCard()" (mouseover)="mouseOver()"  (mouseout)="mouseOut()" style = "top: {{y1}}px; left: {{x1}}px"> 
 
 	<div class = "card-container" [class.show-card] = "cardVisible" style = "top: {{cardY1}}px; left: {{cardX1}}px">
 		<div class="menu-bar" (mouseover)="mouseOverMenubar()" (mouseout) = "mouseOutMenubar()">

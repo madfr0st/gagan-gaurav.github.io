@@ -25,14 +25,16 @@ export class WallComponent implements OnInit {
   public cardY2: number = 0;
   public initialCardHeight = 0;
   public insideMenubar: boolean = false;
+  public startTime: number = 0;
+  public endTime: number = 0;
 
   
   constructor() { 
     this.initialWidth = window.innerWidth;
     this.x1 = window.innerWidth - 100;
     this.y1 = 50;
-    // this.cardY1= window.innerHeight;
-    // this.cardX1 = window.innerWidth / 5;
+    this.cardY1= 150;
+    this.cardX1 = (window.innerWidth - 1400) / 2; // (width - 1200) / 2
   }
 
   ngOnInit(): void {
@@ -50,6 +52,7 @@ export class WallComponent implements OnInit {
   @HostListener('document:mousedown', ['$event'])
   onMouseDown(event: MouseEvent) {
     event.preventDefault();
+    this.startTime = Date.now();
     // console.log(event.clientX);
     // this.mouseHold = true;
     if(this.insideHome){
@@ -68,8 +71,9 @@ export class WallComponent implements OnInit {
   // when mouse click is released.
   @HostListener('document:mouseup', ['$event'])
   onMouseUp(event: MouseEvent) {
-    console.log(event);
+    // console.log(event);
     event.preventDefault();
+    this.endTime = Date.now();
     // this.mouseHold = true;
     this.mouseHold1 = false;
     this.mouseHold2 = false;
@@ -79,7 +83,7 @@ export class WallComponent implements OnInit {
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
     event.preventDefault();
-    console.log(this.mouseHold2, this.insideMenubar);
+    // console.log(this.mouseHold2, this.insideMenubar);
     if(this.mouseHold1 && this.insideHome){
       this.x1 += event.clientX - this.x2;
       this.x2 = event.clientX;
@@ -119,7 +123,8 @@ export class WallComponent implements OnInit {
 
   flipCard() {
     // console.log(this.cardVisible);
-    this.cardVisible = !this.cardVisible;
+    // console.log(this.endTime - this.startTime);
+    if(this.endTime - this.startTime < 150) this.cardVisible = !this.cardVisible; // if the click is fast then only perform the flip.
     // console.log(this.cardVisible);
   }
 }

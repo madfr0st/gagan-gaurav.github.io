@@ -6,12 +6,11 @@
 	align-items: center;
 	justify-content: center;
 	z-index: 0;
-	// background-image: url("/assets/wall/images/wall1.jpg");
+	// background-image: url("/assets/images/wall/wall1.jpg");
 	background-color: lightblue;
 	
 
-	.btn{
-		background-color: red;
+	.image{
 		position: absolute;
 		height: 40px;
 		width: 80px;
@@ -22,7 +21,7 @@
 	.card-container{
 		z-index: 3;
 		height: 800px;
-		width: 1200px;
+		width: 1400px;
 		position: absolute;
 		display: flex;
 		flex-direction: column;
@@ -30,12 +29,12 @@
 		border-radius: 20px;
 		box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.2), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 		visibility: visible;
-		// transform: translateY(20px);
-		// transition: all 100ms ease-out;
+		transform: translateY(10px);
+		transition: all 100ms ease-out;
 
 		&.show-card{
 			visibility: hidden;
-			// transform: translateY(0);
+			transform: translateY(0);
 		}
 
 		.menu-bar{
