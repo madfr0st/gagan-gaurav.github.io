@@ -1,6 +1,16 @@
 
 <div class = "back">
-	<button class = "btn" (click)="viewCard()" (mouseover)="mouseOver()" style = "top:{{y1}}px; left:{{x1}}px" > About </button> 
-	<!-- <button class = "btn" draggable = "true"> About </button>  -->
+	<button class = "btn" (click)="flipCard()" (mouseover)="mouseOver()"  style = "top: {{y1}}px; left: {{x1}}px" > About </button> 
+
+	<div class = "card-container" [class.show-card] = "cardVisible" style = "top: {{cardY1}}px; left: {{cardX1}}px">
+		<div class="menu-bar" (mouseover)="mouseOverMenubar()">
+			<div class="first" (click)="flipCard()" ></div>
+			<div class="second" (click)="flipCard()"></div>
+			<div class="third"></div>
+		</div>	
+		<div class="content-box">
+
+		</div>
+	</div>
 </div>
 
