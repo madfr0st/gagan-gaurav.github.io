@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BlogsComponent } from 'src/lib/blogs/blogs.component';
+import { ProjectsComponent } from 'src/lib/projects/projects.component';
 import { WallComponent } from 'src/lib/wall/wall.component';
-import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/app-wall', pathMatch : 'full'},
-  { path: "app-wall", component: WallComponent}
+  { path: "", component: WallComponent},
+  { path: "projects", component: ProjectsComponent},
+  { path: "blogs", component: BlogsComponent}
 ];
 
 @NgModule({

@@ -1,0 +1,97 @@
+.back{
+	overflow: hidden;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 0;
+	// background-image: url("/assets/images/wall/wall1.jpg");
+	background-color: lightcyan;
+	
+
+	.homebtn{
+		position: absolute;
+		height: 40px;
+		width: 60px;
+		z-index: 1;
+		cursor: pointer;
+	}
+
+	.folder{
+		position: absolute;
+		height: 50px;
+		width: 60px;
+		z-index: 1;
+		cursor: pointer;
+	}
+
+	.card-container{
+		z-index: 3;
+		height: 800px;
+		width: 1400px;
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		background-color: aquamarine;
+		border-radius: 20px;
+		box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.8), 0 8px 10px -6px rgb(0 0 0 / 0.5);
+		visibility: visible;
+		// transform: translateY(10px);
+		// transition: all 100ms ease-out;
+
+		&.show-card{
+			visibility: hidden;
+			// transform: translateY(0);
+		}
+
+		.menu-bar{
+			width: 100%;
+			height: 32px;
+			cursor: pointer;
+			background-color: whitesmoke;
+			border-radius: 20px 20px 0px 0px;
+			border: 3px solid black;
+			border-bottom: 0px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
+			.first{
+				height: 15px;
+				width: 15px;
+				background-color: lightcoral;
+				border-radius: 10px 10px 10px 10px;
+				border: 3px solid black;
+				margin-left: 10px;
+			}
+			.second{
+				height: 15px;
+				width: 15px;
+				background-color: white;
+				border-radius: 10px 10px 10px 10px;
+				border: 3px solid black;
+				margin-left: 10px;
+			}
+			.third{
+				height: 15px;
+				width: 15px;
+				background-color: white;
+				border-radius: 10px 10px 10px 10px;
+				border: 3px solid black;
+				margin-left: 10px;
+			}
+		}
+
+		.content-box{
+			background-color: whitesmoke;
+			width: 100%;
+			height: 96%;
+			border-radius: 0px 0px 20px 20px;
+			border: 3px solid black;
+		}
+	}
+
+
+}
+
