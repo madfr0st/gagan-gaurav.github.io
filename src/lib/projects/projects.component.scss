@@ -28,8 +28,8 @@
 
 	.card-container{
 		z-index: 3;
-		height: 300px;
-		width: 700px;
+		height: 800px;
+		width: 1400px;
 		position: absolute;
 		display: flex;
 		flex-direction: column;
@@ -86,53 +86,9 @@
 		.content-box{
 			background-color: whitesmoke;
 			width: 100%;
-			height: 100%;
+			height: 96%;
 			border-radius: 0px 0px 20px 20px;
 			border: 3px solid black;
-			font-family: 'Courier New', Courier, monospace;
-			font-weight: bold;
-
-			h1{
-				padding: 8px;
-			}
-
-			p{
-				padding: 8px;	
-				font-size: 16px;
-			}
-
-			.find{
-				display: flex;
-				align-items: center;
-				// background-color: blue;
-				width: 100%;
-				height: 60px;
-
-				.logo{
-					height: 32px;
-					width: 32px;
-					margin: 8px;
-				}
-				
-				.res{
-					height: 100%;
-					width: 60%;
-					// background-color: red;
-					display: flex;
-					align-items: center;
-					flex-direction: row;
-					justify-content: flex-end;
-
-					.logo{
-						height: 32px;
-						width: 32px;
-						margin: 8px;
-					}
-				}
-			}
-
-			
-			
 		}
 	}
 

@@ -1,15 +1,13 @@
-import { ThisReceiver } from '@angular/compiler';
-import { Component, OnInit, HostListener} from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
-import { AppConfig} from 'src/config/app.config';
+import { AppConfig } from 'src/config/app.config';
 
 @Component({
-  selector: 'app-wall',
-  templateUrl: './wall.component.html',
-  styleUrls: ['./wall.component.scss']
+  selector: 'app-projects',
+  templateUrl: './projects.component.html',
+  styleUrls: ['./projects.component.scss']
 })
-
-export class WallComponent implements OnInit {
+export class ProjectsComponent implements OnInit {
 
   public HOME: string = "home";
   public PROJECT: string = "project";
@@ -61,7 +59,7 @@ export class WallComponent implements OnInit {
     if(config.blogY1 == undefined) config.blogY1 = 210;
 
     this.cardY1= 150;
-    this.cardX1 = (window.innerWidth - 700) / 2; // (width - 700) / 2
+    this.cardX1 = (window.innerWidth - 1400) / 2; // (width - 1200) / 2
   }
 
   ngOnInit(): void {
@@ -175,9 +173,9 @@ export class WallComponent implements OnInit {
 
   flipCard(value: string) {
     var time = this.endTime - this.startTime;
-    if(time < 150 && value == "project") {
+    if(time < 150 && value == "home") {
       console.log(this.config.homeX1, this.config.homeY1);
-      this.router.navigate(["projects"]);
+      this.router.navigate([""]);
     }else if(time < 150 && value == "blog"){
       this.router.navigate(["blogs"]);
     }else if(time < 150) this.cardVisible = !this.cardVisible; // if the click is fast then only perform the flip.
