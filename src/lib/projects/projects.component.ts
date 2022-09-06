@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppConfig } from 'src/config/app.config';
 
+
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -45,6 +46,8 @@ export class ProjectsComponent implements OnInit {
   public startTime: number = 0;
   public endTime: number = 0;
 
+  public data: any;
+
   
   constructor(public router: Router, public config: AppConfig) { 
     this.initialWidth = window.innerWidth;
@@ -60,9 +63,28 @@ export class ProjectsComponent implements OnInit {
 
     this.cardY1= 150;
     this.cardX1 = (window.innerWidth - 1400) / 2; // (width - 1200) / 2
+
+    this.loadData();
   }
 
   ngOnInit(): void {
+  }
+
+  async loadData(){
+    const url: string = "http://127.0.0.1:8000/lol/portfolio/";
+    const options = {
+            method: 'GET',
+          };
+
+    await fetch(url, options)
+    .then(response => response.json())
+    .then((data) => {
+      console.log(data[0].body);
+      this.data = data[0].body;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
   }
 
   // this maintains the position of button with respect to right side, when window size is changing.
