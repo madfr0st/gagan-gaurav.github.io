@@ -61,8 +61,8 @@ export class ProjectsComponent implements OnInit {
     if(config.blogX1 == undefined) config.blogX1 = window.innerWidth - 100;
     if(config.blogY1 == undefined) config.blogY1 = 210;
 
-    this.cardY1= 150;
-    this.cardX1 = (window.innerWidth - 1400) / 2; // (width - 1200) / 2
+    this.cardY1= 100;
+    this.cardX1 = (window.innerWidth - 1400) / 2; // (width - 1500) / 2
 
     this.loadData();
   }
