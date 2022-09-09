@@ -71,7 +71,7 @@ export class ProjectsComponent implements OnInit {
   }
 
   async loadData(){
-    const url: string = "http://127.0.0.1:8000/lol/portfolio/";
+    const url: string = "https://iamgagan.herokuapp.com/api/portfolio/portfolio/";
     const options = {
             method: 'GET',
           };
@@ -79,7 +79,7 @@ export class ProjectsComponent implements OnInit {
     await fetch(url, options)
     .then(response => response.json())
     .then((data) => {
-      console.log(data[0].body);
+      console.log(data);
       this.data = data[0].body;
     })
     .catch((err) => {
