@@ -7,9 +7,8 @@
 	justify-content: center;
 	z-index: 0;
 	// background-image: url("/assets/images/wall/wall1.jpg");
-	background-color: lightcyan;
+	background-color: #c7ede6;
 	
-
 	.homebtn{
 		position: absolute;
 		height: 40px;
@@ -17,7 +16,7 @@
 		z-index: 1;
 		cursor: pointer;
 	}
-
+	
 	.folder{
 		position: absolute;
 		height: 50px;
@@ -36,12 +35,12 @@
 		background-color: aquamarine;
 		border-radius: 20px;
 		box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.8), 0 8px 10px -6px rgb(0 0 0 / 0.5);
-		visibility: visible;
+		visibility: hidden;
 		// transform: translateY(10px);
 		// transition: all 100ms ease-out;
 
 		&.show-card{
-			visibility: hidden;
+			visibility: visible;
 			// transform: translateY(0);
 		}
 
@@ -108,6 +107,8 @@
 				background-color: lightpink;
 				width: 90%;
 				border-radius: 10px;
+				// height: 200px;
+				// word-wrap: break-word;
 				// height:max-content;
 				margin-top: 10px;
 				padding: 20px; 
@@ -125,17 +126,18 @@
 					// background-color: red;
 					font-size: 14px;
 					margin: 0px;
+					margin-bottom: 10px;
 				}
 
 				.topic{
 					width: 100%;
 					// height: 40px;
-					// font-weight: bold;
+					font-weight: bold;
 					font-size: 22px;
 					// background-color: lightgreen;
 				}
 
-				.stack{
+				.body{
 					width: 100%;
 					// height: 30px;
 					font-style: italic;

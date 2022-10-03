@@ -1,8 +1,20 @@
 
-<div class = "back">
-	<img src="/assets/images/buttons/home/ggn111.png" class ="homebtn" (click)="flipCard(HOME)" (mouseover)="mouseOver(HOME)" (mouseout)="mouseOut(HOME)" style = "top: {{config.homeY1}}px; left: {{config.homeX1}}px"> 
-	<img src="/assets/images/buttons/closed-folder.png" class ="folder" (click)="flipCard(PROJECT)" (mouseover)="mouseOver(PROJECT)" (mouseout)="mouseOut(PROJECT)" style = "top: {{config.projectY1}}px; left: {{config.projectX1}}px">
-	<img src="/assets/images/buttons/closed-folder.png" class ="folder" (click)="flipCard(BLOG)" (mouseover)="mouseOver(BLOG)" (mouseout)="mouseOut(BLOG)" style = "top: {{config.blogY1}}px; left: {{config.blogX1}}px">
+<div class="back">
+	<div class="folderbtn" (click)="flipCard(HOME)" (mouseover)="mouseOver(HOME)" (mouseout)="mouseOut(HOME)" style = "top: {{config.homeY1}}px; left: {{config.homeX1}}px">
+		<img src="/assets/images/buttons/home/ggn111.png" class="homelogo">
+		<p class="foldername"> Home </p>
+	</div>
+	<div class="folderbtn" (click)="flipCard(PROJECT)" (mouseover)="mouseOver(PROJECT)" (mouseout)="mouseOut(PROJECT)" style = "top: {{config.projectY1}}px; left: {{config.projectX1}}px">
+		<img src="/assets/images/buttons/cloudClosedFolder.png" class="logo">
+		<p class="foldername"> Projects </p>
+	</div>
+
+	<div class="folderbtn" (click)="flipCard(BLOG)" (mouseover)="mouseOver(BLOG)" (mouseout)="mouseOut(BLOG)" style = "top: {{config.blogY1}}px; left: {{config.blogX1}}px">
+		<img src="/assets/images/buttons/cloudClosedFolder.png" class="logo">
+		<p class="foldername"> Blogs </p>
+	</div>
+	
+	
 	
 	<div class = "card-container" [class.show-card] = "cardVisible" style = "top: {{cardY1}}px; left: {{cardX1}}px">
 		<div class="menu-bar" (mouseover)="mouseOver(CARD)" (mouseout)="mouseOut(CARD)">
@@ -12,22 +24,22 @@
 		</div>	
 		<div class="content-box">
 			<h1>Hey, I'm Gagan!</h1>
-			<p> I am a full stack software developer. currently, persuing a undergrad degree at National Institute of Technology Raipur.</p>
+			<p> I am a full stack software developer. currently, persuing a undergrad degree at NIT Raipur.</p>
 			<div class="find">
 				<p> Find me on </p> 
 				<a href="https://linkedin.com/in/gagan-gaurav">
-					<img src="assets/images/buttons/linkedin.png" class = "logo">
+					<img src="assets/images/buttons/cloudLinkedin.png" class = "logo">
 				</a>
 				<a href="https://mail.google.com/mail/?view=cm&fs=1&to=iamgagangaurav@gmail.com">
-					<img src="assets/images/buttons/gmail.png" class = "logo">
+					<img src="assets/images/buttons/cloudGmail.png" class = "logo">
 				</a>
 				<a href="https://github.com/gagan-gaurav">
-					<img src="assets/images/buttons/git.png" class = "logo">
+					<img src="assets/images/buttons/cloudGit.png" class = "logo">
 				</a>
 				<div class="res">
 					<p> Resume </p>
 					<a href="https://docs.google.com/document/d/1CaoFqU-tZwj7LNEjBxguaU8XPmAwZQbI9Sjfh1ohzYU/edit?usp=sharing">
-						<img src="assets/images/buttons/doc.png" class = "logo">
+						<img src="assets/images/buttons/cloudDoc.png" class = "logo">
 					</a>
 				</div>
 			</div>

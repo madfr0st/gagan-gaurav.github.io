@@ -37,7 +37,7 @@ export class WallComponent implements OnInit {
   public blogY2: number = 0;
 
 
-  public cardVisible: boolean = false;
+  public cardVisible: boolean = true;
   public cardX1: number = 0;
   public cardY1: number = 0;
   public cardX2: number = 0;
@@ -55,10 +55,10 @@ export class WallComponent implements OnInit {
     if(config.homeY1 == undefined) config.homeY1 = 50;
 
     if(config.projectX1 == undefined) config.projectX1 = window.innerWidth - 100;
-    if(config.projectY1 == undefined) config.projectY1 = 130;
+    if(config.projectY1 == undefined) config.projectY1 = 140;
 
     if(config.blogX1 == undefined) config.blogX1 = window.innerWidth - 100;
-    if(config.blogY1 == undefined) config.blogY1 = 210;
+    if(config.blogY1 == undefined) config.blogY1 = 230;
 
     this.cardY1= 150;
     this.cardX1 = (window.innerWidth - 700) / 2; // (width - 700) / 2
@@ -172,7 +172,7 @@ export class WallComponent implements OnInit {
     else if(value == "card" && this.mouseHoldCard == false) this.insideMenubar = false; 
   }
 
-
+  
   flipCard(value: string) {
     var time = this.endTime - this.startTime;
     if(time < 150 && value == "project") {
@@ -180,7 +180,9 @@ export class WallComponent implements OnInit {
       this.router.navigate(["projects"]);
     }else if(time < 150 && value == "blog"){
       this.router.navigate(["blogs"]);
-    }else if(time < 150) this.cardVisible = !this.cardVisible; // if the click is fast then only perform the flip.
+    }else if(time < 150) {
+      this.cardVisible = !this.cardVisible; // if the click is fast then only perform the flip.
     // console.log(this.cardVisible);
+    }
   }
 }

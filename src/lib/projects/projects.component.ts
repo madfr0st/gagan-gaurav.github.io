@@ -15,6 +15,9 @@ export class ProjectsComponent implements OnInit {
   public BLOG: string = "blog";
   public CARD: string = "card";
 
+  public projectFolderUrl : string = "/assets/images/buttons/cloudOpenFolder.png";
+  public blogFolderUrl : string = "/assets/images/buttons/cloudClosedFolder.png";
+
 
   public mouseHoldHome: boolean = false; // for button
   public mouseHoldProject: boolean = false; // for project
@@ -36,7 +39,7 @@ export class ProjectsComponent implements OnInit {
   public blogY2: number = 0;
 
 
-  public cardVisible: boolean = false;
+  public cardVisible: boolean = true;
   public cardX1: number = 0;
   public cardY1: number = 0;
   public cardX2: number = 0;
@@ -80,7 +83,7 @@ export class ProjectsComponent implements OnInit {
     .then(response => response.json())
     .then((data) => {
       console.log(data);
-      this.data = data[0].body;
+      this.data = data;
     })
     .catch((err) => {
       console.log(err);
@@ -200,7 +203,14 @@ export class ProjectsComponent implements OnInit {
       this.router.navigate([""]);
     }else if(time < 150 && value == "blog"){
       this.router.navigate(["blogs"]);
-    }else if(time < 150) this.cardVisible = !this.cardVisible; // if the click is fast then only perform the flip.
+    }else if(time < 150) {
+      this.cardVisible = !this.cardVisible; // if the click is fast then only perform the flip.
     // console.log(this.cardVisible);
+      if(this.cardVisible){
+        this.projectFolderUrl = "/assets/images/buttons/cloudOpenFolder.png";
+      }else{
+        this.projectFolderUrl = "/assets/images/buttons/cloudClosedFolder.png"
+      }
+    }
   }
 }

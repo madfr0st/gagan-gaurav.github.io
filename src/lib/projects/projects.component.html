@@ -1,7 +1,7 @@
 <div class = "back">
 	<img src="/assets/images/buttons/home/ggn111.png" class ="homebtn" (click)="flipCard(HOME)" (mouseover)="mouseOver(HOME)" (mouseout)="mouseOut(HOME)" style = "top: {{config.homeY1}}px; left: {{config.homeX1}}px"> 
-	<img src="/assets/images/buttons/closed-folder.png" class ="folder" (click)="flipCard(PROJECT)" (mouseover)="mouseOver(PROJECT)" (mouseout)="mouseOut(PROJECT)" style = "top: {{config.projectY1}}px; left: {{config.projectX1}}px">
-	<img src="/assets/images/buttons/closed-folder.png" class ="folder" (click)="flipCard(BLOG)" (mouseover)="mouseOver(BLOG)" (mouseout)="mouseOut(BLOG)" style = "top: {{config.blogY1}}px; left: {{config.blogX1}}px">
+	<img src="{{this.projectFolderUrl}}" class ="folder" (click)="flipCard(PROJECT)" (mouseover)="mouseOver(PROJECT)" (mouseout)="mouseOut(PROJECT)" style = "top: {{config.projectY1}}px; left: {{config.projectX1}}px">
+	<img src="{{this.blogFolderUrl}}" class ="folder" (click)="flipCard(BLOG)" (mouseover)="mouseOver(BLOG)" (mouseout)="mouseOut(BLOG)" style = "top: {{config.blogY1}}px; left: {{config.blogX1}}px">
 	
 	<div class = "card-container" [class.show-card] = "cardVisible" style = "top: {{cardY1}}px; left: {{cardX1}}px">
 		<div class="menu-bar" (mouseover)="mouseOver(CARD)" (mouseout)="mouseOut(CARD)">
@@ -10,48 +10,19 @@
 			<div class="third"></div>
 		</div>	
 		<div class="content-box">
-			<!-- <div [innerHtml]="data"></div> -->
 			<div class="heading"> 
 				<h1> Projects </h1>
 			</div>
-			<div class="box">
+			<div class="box" *ngFor="let info of data">
 				<div class="time">
-					<p> Jan – Apr 2020 </p>
+					<p> {{info.date}} </p>
 				</div>
 				<div class="topic">
-					<p>[+] <b>Racketish compiler</b></p>
+					<p> [+] {{info.description}} </p>
 				</div>
-				<div class="stack">
-					<p>React, TypeScript, MaterialUI</p>
+				<div class="body">
+					<b [innerHTML]="info.body"> </b>
 				</div>
-				<!-- <p>Content is the information contained within communication media. This includes internet, cinema, television, radio, audio CDs, books, magazines, physical art, and live event content. It’s directed at an end-user or audience in the sectors of publishing, art, and communication. Live events include speeches, conferences, and stage performances. Content within media focuses on the attention and how receptive the audience is to the content. Circulation brings the content to everyone and helps spread it to reach large audiences. It is a process in which anyone who encounters any type of content will go through a cycle where they encounter the content, interpret it, and will continue to share it with other people.
-The advent of the Information Age has led to the advancement of content as a mass-produced commodity for distribution through avenues such as the Internet (and more specifically social media) and the professionalisation of content creation.
-Any content developed or disseminated by an individual or on one's behalf, including but not limited to content distributed via books, magazines, brochures, social media, billboards, websites, mobile applications, television, and radio, is referenced to as media 
-content.
-Content is the information contained within communication media. This includes internet, cinema, television, radio, audio CDs, books, magazines, physical art, and live event content. It’s directed at an end-user or audience in the sectors of publishing, art, and communication. Live events include speeches, conferences, and stage performances. Content within media focuses on the attention and how receptive the audience is to the content. Circulation brings the content to everyone and helps spread it to reach large audiences. It is a process in which anyone who encounters any type of content will go through a cycle where they encounter the content, interpret it, and will continue to share it with other people.
-The advent of the Information Age has led to the advancement of content as a mass-produced commodity for distribution through avenues such as the Internet (and more specifically social media) and the professionalisation of content creation.
-Any content developed or disseminated by an individual or on one's behalf, including but not limited to content distributed via books, magazines, brochures, social media, billboards, websites, mobile applications, television, and radio, is referenced to as media 
-content.</p> -->
-			</div>
-			
-			<div class="box">
-				
-			</div>
-
-			<div class="box">
-				
-			</div>
-
-			<div class="box">
-				
-			</div>
-
-			<div class="box">
-				
-			</div>
-
-			<div class="box">
-				
 			</div>
 		</div>
 		<div class="footer">
