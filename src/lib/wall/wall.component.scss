@@ -7,23 +7,66 @@
 	justify-content: center;
 	z-index: 0;
 	// background-image: url("/assets/images/wall/wall1.jpg");
-	background-color: lightcyan;
+	background-color: #c7ede6;
 	
 
 	.homebtn{
-		position: absolute;
-		height: 40px;
-		width: 60px;
 		z-index: 1;
+		position: absolute;
 		cursor: pointer;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.logo{
+			height: 40px;
+			width: 60px;
+			margin-bottom: 5px;
+		}
+
+		.foldername{
+			height: 20px;
+			width: 60px;
+			font-size: 16px;
+			font-weight: bolder;
+			font-family: 'Courier New', Courier, monospace;
+			display: flex;
+			justify-content: center;
+			margin: 0px;
+		}
 	}
 
-	.folder{
-		position: absolute;
-		height: 50px;
-		width: 60px;
+	.folderbtn{
 		z-index: 1;
+		position: absolute;
 		cursor: pointer;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.homelogo{
+			height: 40px;
+			width: 60px;
+			margin-bottom: 2px;
+		}
+
+		.logo{
+			height: 50px;
+			width: 60px;
+			margin-bottom: 2px;
+		}
+
+		.foldername{
+			height: 15px;
+			width: 60px;
+			font-size: 12px;
+			// font-weight: bold;
+			color: black;
+			font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+			display: flex;
+			justify-content: center;
+			margin: 0px;
+		}
 	}
 
 	.card-container{
@@ -36,12 +79,14 @@
 		background-color: aquamarine;
 		border-radius: 20px;
 		box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.8), 0 8px 10px -6px rgb(0 0 0 / 0.5);
-		visibility: visible;
+		visibility: hidden;
+		// padding: 15px;
+		// box-sizing: border-box;
 		// transform: translateY(10px);
 		// transition: all 100ms ease-out;
 
 		&.show-card{
-			visibility: hidden;
+			visibility: visible;
 			// transform: translateY(0);
 		}
 
@@ -51,7 +96,7 @@
 			cursor: pointer;
 			background-color: whitesmoke;
 			border-radius: 20px 20px 0px 0px;
-			border: 3px solid black;
+			border: 2px solid black;
 			border-bottom: 0px;
 			display: flex;
 			flex-direction: row;
@@ -62,7 +107,7 @@
 				width: 15px;
 				background-color: lightcoral;
 				border-radius: 10px 10px 10px 10px;
-				border: 3px solid black;
+				border: 2px solid black;
 				margin-left: 10px;
 			}
 			.second{
@@ -70,7 +115,7 @@
 				width: 15px;
 				background-color: white;
 				border-radius: 10px 10px 10px 10px;
-				border: 3px solid black;
+				border: 2px solid black;
 				margin-left: 10px;
 			}
 			.third{
@@ -78,7 +123,7 @@
 				width: 15px;
 				background-color: white;
 				border-radius: 10px 10px 10px 10px;
-				border: 3px solid black;
+				border: 2px solid black;
 				margin-left: 10px;
 			}
 		}
@@ -88,25 +133,41 @@
 			width: 100%;
 			height: 100%;
 			border-radius: 0px 0px 20px 20px;
-			border: 3px solid black;
-			font-family: 'Courier New', Courier, monospace;
-			font-weight: bold;
+			border: 2px solid black;
+			// font-family: 'Courier New', Courier, monospace;
+			// font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+			// font-family: Jost,sans-serif;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			// font-weight: bold;
+			// padding: 15px;
+			// box-sizing: border-box;
 
 			h1{
-				padding: 8px;
+				padding: 12px 24px;
+				margin: 0px;
 			}
 
 			p{
-				padding: 8px;	
-				font-size: 16px;
+				padding: 12px 24px;	
+				margin: 0px;
+				font-size: 15px;
+				font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 			}
 
 			.find{
+				padding: 0px 24px;
 				display: flex;
 				align-items: center;
+				box-sizing: border-box;
 				// background-color: blue;
 				width: 100%;
 				height: 60px;
+
+				p{
+					padding: 12px 0px;
+				}
 
 				.logo{
 					height: 32px;
