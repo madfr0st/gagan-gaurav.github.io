@@ -9,4 +9,8 @@ export class AppConfig {
 	public projectY1: any;
 	public blogX1: any;
 	public blogY1: any;
+	public skillX1: any;
+	public skillY1: any;
+	public flawX1: any;
+	public flawY1: any;
 }
