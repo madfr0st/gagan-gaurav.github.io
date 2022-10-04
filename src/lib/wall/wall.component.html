@@ -1,17 +1,24 @@
 
 <div class="back">
 	<div class="folderbtn" (click)="flipCard(HOME)" (mouseover)="mouseOver(HOME)" (mouseout)="mouseOut(HOME)" style = "top: {{config.homeY1}}px; left: {{config.homeX1}}px">
-		<img src="/assets/images/buttons/home/ggn111.png" class="homelogo">
+		<img src="{{this.homeFolderUrl}}" class="homelogo">
 		<p class="foldername"> Home </p>
 	</div>
 	<div class="folderbtn" (click)="flipCard(PROJECT)" (mouseover)="mouseOver(PROJECT)" (mouseout)="mouseOut(PROJECT)" style = "top: {{config.projectY1}}px; left: {{config.projectX1}}px">
-		<img src="/assets/images/buttons/cloudClosedFolder.png" class="logo">
+		<img src="{{this.projectFolderUrl}}" class="logo">
 		<p class="foldername"> Projects </p>
 	</div>
-
 	<div class="folderbtn" (click)="flipCard(BLOG)" (mouseover)="mouseOver(BLOG)" (mouseout)="mouseOut(BLOG)" style = "top: {{config.blogY1}}px; left: {{config.blogX1}}px">
-		<img src="/assets/images/buttons/cloudClosedFolder.png" class="logo">
+		<img src="{{this.blogFolderUrl}}" class="logo">
 		<p class="foldername"> Blogs </p>
+	</div>
+	<div class="folderbtn" (click)="flipCard(SKILL)" (mouseover)="mouseOver(SKILL)" (mouseout)="mouseOut(SKILL)" style = "top: {{config.skillY1}}px; left: {{config.skillX1}}px">
+		<img src="{{this.skillFolderUrl}}" class="logo">
+		<p class="foldername"> Skills </p>
+	</div>
+	<div class="folderbtn" (click)="flipCard(FLAW)" (mouseover)="mouseOver(FLAW)" (mouseout)="mouseOut(FLAW)" style = "top: {{config.flawY1}}px; left: {{config.flawX1}}px">
+		<img src="{{this.flawFolderUrl}}" class="logo">
+		<p class="foldername"> Flaws </p>
 	</div>
 	
 	
@@ -24,9 +31,9 @@
 		</div>	
 		<div class="content-box">
 			<h1>Hey, I'm Gagan!</h1>
-			<p> I am a full stack software developer. currently, persuing a undergrad degree at NIT Raipur.</p>
+			<p> I am a full-stack software developer and a hobbyist competitive programmer who loves to tackle challenging problems. I am currently pursuing an undergrad degree at the National Institute of Technology Raipur.</p>
 			<div class="find">
-				<p> Find me on </p> 
+				<p> Find me on : </p> 
 				<a href="https://linkedin.com/in/gagan-gaurav">
 					<img src="assets/images/buttons/cloudLinkedin.png" class = "logo">
 				</a>
@@ -37,7 +44,7 @@
 					<img src="assets/images/buttons/cloudGit.png" class = "logo">
 				</a>
 				<div class="res">
-					<p> Resume </p>
+					<p> Resume : </p>
 					<a href="https://docs.google.com/document/d/1CaoFqU-tZwj7LNEjBxguaU8XPmAwZQbI9Sjfh1ohzYU/edit?usp=sharing">
 						<img src="assets/images/buttons/cloudDoc.png" class = "logo">
 					</a>
