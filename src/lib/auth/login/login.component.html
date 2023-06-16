@@ -1,0 +1,10 @@
+<div class="login-page">
+	<div class="form">
+	  <form class="login-form" (ngSubmit)="submitForm()" #myForm="ngForm">
+		<input type="text" placeholder="email" name="email" [(ngModel)]="formData.email" required/>
+		<input type="password" placeholder="password" name="password" [(ngModel)]="formData.password" required/>
+		<button type="submit" [disabled]="!myForm.form.valid">Log In</button>
+		<p class="message">Not registered? <a href="#">Create an account</a></p>
+	  </form>
+	</div>
+  </div>
