@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
+import { AngularEditorModule } from '@kolkov/angular-editor';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import { CookieService } from 'ngx-cookie-service';
     WallComponent, ProjectsComponent, BlogsComponent, SkillsComponent, FlawsComponent, LoginComponent, SignupComponent
   ],
   imports: [
-    HttpClientModule, FormsModule, CommonModule, RouterModule.forChild([])
+    HttpClientModule, FormsModule, CommonModule, RouterModule.forChild([]), AngularEditorModule
   ],
   providers: [AppConfig, { provide: APP_BASE_HREF, useValue: '/' }, CookieService],
   exports: [ProjectsComponent, WallComponent, SkillsComponent, BlogsComponent, SignupComponent, LoginComponent],

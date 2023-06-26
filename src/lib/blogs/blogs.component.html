@@ -9,15 +9,28 @@
 	</div>
 	<div class="blogs-container">
 		<div class="nav-menu">
-			<button class="trending">
+			<button class="trending" (click)="trending()">
+				Trending
 			</button>
-			<button class="myblogs">
+			<button class="myblogs" (click)="myblogs()">
+				My Blogs
 			</button>
-			<button class="addblogs">
+			<button class="addblogs" (click)="addblogs()">
+				Add Blog
 			</button>
 		</div>
 		<div class="blogs">
+			<div class="trending-container" *ngIf="showTrending">
 
+			</div>
+			<div class="myblogs-container" *ngIf="showMyBlogs">
+	
+			</div>
+			<div class="addblogs-container" *ngIf="showAddBlogs">
+				<input type="text" placeholder="Enter blog title..." [(ngModel)]="title">
+				<angular-editor [(ngModel)]="htmlContent" class="editor" [config]="config"></angular-editor>
+				<button (click)="post()">Post</button>
+			</div>
 		</div>
 	</div>
 	

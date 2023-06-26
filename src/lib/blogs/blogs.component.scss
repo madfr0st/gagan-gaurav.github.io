@@ -1,6 +1,7 @@
 
 .blogs-window{
-	background-color: red;
+	width: 90%;
+	// background-color: red;
 	border-radius: 8px;
 	border: solid black;
 	display: flex;
@@ -28,44 +29,113 @@
 		}
 	}
 	.search{
-		height: 32px;
+		height: 24px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: grey;
+		margin-top: 8px;
+		// background-color: grey;
+
+		input{
+			height: 24px;
+			width: 320px;
+			padding: 0px 8px;
+			border-radius: 24px;
+			border: solid 2px black;
+		}
 		
 		.search-btn{
 			height: 24px;
 			width: 24px;
+			margin-left: 8px;
+			border-radius: 24px;
+			border: solid black;
 			background-color: green;
 		}
 	}
 
 	.blogs-container{
-		height: 500px;
+		height: 720px;
+		padding: 8px;
 		display: flex;
 		align-items: center;
 
 		.nav-menu{
 			display: flex;
 			flex-direction: column;
-			background-color: lightblue;
+			// background-color: lightblue;
 			// height: 100%;
 			align-items: center;
 			justify-content: center;
 
 			button{
 				height: 32px;
-				width: 32px;
-				margin: 4px 4px 4px 4px;
+				width: 128px;
+				margin: 4px;
 				border-radius: 8px;
 			}
 		}
 		
 		.blogs{
-			background-color: lightyellow;
+			position: relative;
 			height: 100%;
 			width: 100%;
+			margin-left: 8px;
+			
+
+			.trending-container{
+				background-color: lightcoral;
+				height: 100%;
+				width: 100%;
+				border-radius: 8px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+	
+			.myblogs-container{
+				background-color: lightseagreen;
+				height: 100%;
+				width: 100%;
+				border-radius: 8px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+	
+			.addblogs-container{
+				background-color: lightblue;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				align-items: center;
+				height: 100%;
+				width: 100%;
+				border-radius: 8px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				padding: 8px;
+				box-sizing: border-box;
+
+				input{
+					height: 24px;
+					border-radius: 4px;
+					border: solid 2px black;
+				}
+
+				button{
+					background-color: lightgreen;
+					height: 32px;
+					width: 72px;
+					border: solid 2px black;
+					border-radius: 24px;
+				}
+
+				button:hover{
+					background-color: darkgreen;
+				}
+			}
 		}
 	}
 }
