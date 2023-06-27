@@ -72,6 +72,30 @@ export class BlogsComponent implements OnInit {
   };
 
   post(){
-    
+    const jwtToken = this.cookieService.get('boonjwtToken');
+    const username = this.cookieService.get('boonCurrentUser');
+    const body = {
+      username: username,
+      title: this.title,
+      content: this.htmlContent
+    };
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${jwtToken}` // Include the JWT token in the Authorization header
+    });
+
+    console.log(headers);
+
+    this.http.post('http://localhost:8080/api/v1/blogs', body, { headers })
+    .subscribe({
+      next: response => {
+        console.log(response);
+      },
+      error: error => {
+        console.error('API Error', error);
+      }  
+      
+    });
   }
 }

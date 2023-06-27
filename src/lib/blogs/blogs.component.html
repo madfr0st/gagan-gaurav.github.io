@@ -29,7 +29,7 @@
 			<div class="addblogs-container" *ngIf="showAddBlogs">
 				<input type="text" placeholder="Enter blog title..." [(ngModel)]="title">
 				<angular-editor [(ngModel)]="htmlContent" class="editor" [config]="config"></angular-editor>
-				<button (click)="post()">Post</button>
+				<div class="btn" (click)="post()">Post</div>
 			</div>
 		</div>
 	</div>
