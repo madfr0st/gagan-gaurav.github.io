@@ -28,8 +28,10 @@ export class SignupComponent implements OnInit {
       .subscribe({
         next: response => {
           const jwtToken = response.token;
+          const username = response.username;
           this.cookieService.set('boonjwtToken', jwtToken);
-          console.log('JWT Token:', jwtToken);
+          this.cookieService.set('boonCurrentUser', username);
+          console.log('JWT Token:', jwtToken, '\nUsername:', username);
           // Handle the JWT token as needed
         },
         error: error => {
