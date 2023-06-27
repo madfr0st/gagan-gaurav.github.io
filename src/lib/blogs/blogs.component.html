@@ -1,1 +1,37 @@
-<p>Still Typing ;)</p>
+<div class="blogs-window">
+	<div class="menu-bar">
+		<div class="heading">Blogs</div>
+		<div class="close"></div>
+	</div>
+	<div class="search">
+		<input type="text" placeholder="Search">
+		<div class="search-btn"></div>
+	</div>
+	<div class="blogs-container">
+		<div class="nav-menu">
+			<button class="trending" (click)="trending()">
+				Trending
+			</button>
+			<button class="myblogs" (click)="myblogs()">
+				My Blogs
+			</button>
+			<button class="addblogs" (click)="addblogs()">
+				Add Blog
+			</button>
+		</div>
+		<div class="blogs">
+			<div class="trending-container" *ngIf="showTrending">
+
+			</div>
+			<div class="myblogs-container" *ngIf="showMyBlogs">
+	
+			</div>
+			<div class="addblogs-container" *ngIf="showAddBlogs">
+				<input type="text" placeholder="Enter blog title..." [(ngModel)]="title">
+				<angular-editor [(ngModel)]="htmlContent" class="editor" [config]="config"></angular-editor>
+				<div class="btn" (click)="post()">Post</div>
+			</div>
+		</div>
+	</div>
+	
+</div>

@@ -1,11 +1,10 @@
 import { Meta, moduleMetadata } from '@storybook/angular';
-import { WallComponent } from 'src/lib/wall/wall.component';
+import { BlogsComponent } from 'src/lib/blogs/blogs.component';
 import { PortfolioModule } from 'src/lib/portfolio.module';
 
-
 export default {
-	title: 'MyComponents/Wall',
-	component: WallComponent,
+	title: 'MyComponents/Blogs',
+	component: BlogsComponent,
 	decorators: [
 		moduleMetadata({
 			imports: [
@@ -15,9 +14,9 @@ export default {
 	]
 } as Meta;
 
-const Template = (args: WallComponent) => ({
-	component: WallComponent,
+const Template = (args: BlogsComponent) => ({
+	componet: BlogsComponent,
 	props: args
 })
 
-export const Wall = Template.bind({});
+export const Blogs = Template.bind({});

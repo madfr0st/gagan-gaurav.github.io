@@ -1,0 +1,156 @@
+
+.blogs-window{
+	width: 90%;
+	// background-color: red;
+	border-radius: 8px;
+	border: solid black;
+	display: flex;
+	flex-direction: column;
+
+	.menu-bar{
+		background-color: cornflowerblue;
+		height: 24px;
+		display: flex;
+		justify-content: align-self;
+		align-items: center;
+		border-bottom: solid black;
+
+		.heading{
+			margin-left: auto;
+		}
+		.close{
+			background-color: red;
+			height: 12px;
+			width: 12px;
+			border: solid black;
+			border-radius: 12px;
+			margin-left: auto;
+			margin-right: 4px;
+		}
+	}
+	.search{
+		height: 24px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 8px;
+		// background-color: grey;
+
+		input{
+			height: 24px;
+			width: 320px;
+			padding: 0px 8px;
+			border-radius: 24px;
+			border: solid 2px black;
+		}
+		
+		.search-btn{
+			height: 24px;
+			width: 24px;
+			margin-left: 8px;
+			border-radius: 24px;
+			// border: solid 2px black;
+			background-color: lightgreen;
+			box-shadow: 4px 4px;
+			cursor: pointer;
+		}
+		
+		.search-btn:active{
+			background-color: rgb(78, 151, 78);
+			box-shadow: 2px 2px;
+		}
+	}
+
+	.blogs-container{
+		height: 720px;
+		padding: 8px;
+		display: flex;
+		align-items: center;
+
+		.nav-menu{
+			display: flex;
+			flex-direction: column;
+			// background-color: lightblue;
+			// height: 100%;
+			align-items: center;
+			justify-content: center;
+
+			button{
+				height: 32px;
+				width: 128px;
+				margin: 4px;
+				border-radius: 8px;
+			}
+		}
+		
+		.blogs{
+			position: relative;
+			height: 100%;
+			width: 100%;
+			margin-left: 8px;
+			
+
+			.trending-container{
+				background-color: lightcoral;
+				height: 100%;
+				width: 100%;
+				border-radius: 8px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+	
+			.myblogs-container{
+				background-color: lightseagreen;
+				height: 100%;
+				width: 100%;
+				border-radius: 8px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+	
+			.addblogs-container{
+				background-color: lightcyan;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				align-items: center;
+				height: 100%;
+				width: 100%;
+				border-radius: 8px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				padding: 8px;
+				box-sizing: border-box;
+
+				input{
+					height: 36px ;
+					font-size: 32px;
+					padding: 4px;
+					border-radius: 4px;
+					border: solid 2px black;
+				}
+
+				.btn{
+					background-color: lightgreen;
+					height: 32px;
+					width: 84px;
+					border: 0px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					box-shadow: 4px 4px;
+					border-radius: 24px;
+					cursor: pointer;
+				}
+
+				.btn:active{
+					background-color: #38a338;
+					box-shadow: 2px 2px;
+				}
+			}
+		}
+	}
+}
